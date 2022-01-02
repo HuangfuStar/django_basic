@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^(9e^mttnvvkuh)$_9r@mc#564vh4k&)e-njjwaf8zkuwz+(p2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # # 方案一:
     # 'book',
-    # # 方案二:
-    # 'book.apps.BookConfig',
+    # # 方案二: 需要注册后才能够进行模型的迁移
+    'book.apps.BookConfig',
 ]
 
 MIDDLEWARE = [
@@ -108,8 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 

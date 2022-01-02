@@ -15,6 +15,10 @@ class BookInfo(models.Model):
     # 会自动创建一个 id 字段
     name = models.CharField(max_length=50)
 
+    def __str__(self):
+        result = f'{self.id}\t {self.name}'
+        return result
+
 class PeopleInfo(models.Model):
     name = models.CharField(max_length=50)
     gender = models.BooleanField()
