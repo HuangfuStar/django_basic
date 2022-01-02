@@ -6,5 +6,6 @@ from django.http import HttpResponse
 
 # route address: /index/
 def index(request):
-    response = HttpResponse('ok')
+
+    response = render(request, 'book/index.html')
     return response
